@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Nunito&display=swap')
+
+$primary-color: #bada55
+$secondary-color: rebeccapurple
+
+=display-type
+  font-family: 'Pacifico', cursive
+  line-height: 1em
+  font-weight: 400
+
+=main-type
+  font-family: 'Nunito', sans-serif
+  line-height: 1.2rem
+  color: darken($primary-color, 42%)
+
+=rounded-border($radius)
+  border-radius: $radius
+  border: thick solid darken($primary-color, 20%)
+
+html
+  height: 100%
+
+body
+  margin: 0
+  min-height: 100%
+  background-color: $primary-color
+  font-size: 16px
+  +main-type
+
+h1, h2, h3, h4, h5, h6
+  +display-type
+
+h1
+  font-size: 3rem
+
+h2
+  font-size: 2rem
+
+main
+  padding: 16px
+
+figure
+  margin-left: 0
+  text-align: center
+
+  figcaption
+    font-style: italic
+
+  img
+    +rounded-border(5px)
+    width: 100%
+
+header
+  display: flex
+  align-items: center
+  flex-direction: row-reverse
+  justify-content: center
+
+  img
+    height: 3rem
+    margin-left: 1rem
+
+blockquote
+  +rounded-border(5px)
+  padding: 1rem
+
+  p
+    margin: 0
+
+  p + p
+    margin-top: 1rem
+
+ul
+  li
+    list-style: square
+
+    li
+      list-style: disc
